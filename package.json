@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006 --https --ssl-cert C:/Users/VojtechLunak/Documents/certs/localhost.pem --ssl-key C:/Users/VojtechLunak/Documents/certs/localhost-key.pem ",
     "build": "microbundle --jsx React.createElement",
     "build:lib": "npm run build && npm pack",
     "build-storybook": "build-storybook"
@@ -29,9 +29,10 @@
   ],
   "dependencies": {
     "@types/leaflet": "^1.7.11",
-    "intelligent-tree-select": "~0.8.3",
     "axios": "^1.1.3",
+    "intelligent-tree-select": "~0.8.3",
     "leaflet": "^1.8.0",
+    "react-bootstrap-typeahead": "^6.0.0",
     "react-leaflet": "^3.2.5",
     "react-leaflet-custom-control": "^1.2.2"
   },
