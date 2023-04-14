@@ -19,6 +19,7 @@ export default class Constants {
     static LATITUDE_IRI = 'https://slovník.gov.cz/veřejný-sektor/pojem/zemepisná-šírka';
     static ADDRESS_IRI = 'https://slovník.gov.cz/legislativní/sbírka/111/2009/pojem/adresa';
     static ADDRESS_TEXT = 'https://slovník.gov.cz/generický/adresy/pojem/text-adresy';
+    static ADDRESS_CODE = 'https://slovník.gov.cz/generický/adresy/pojem/má-kód-adresního-místa';
     static STREET_NAME = 'https://slovník.gov.cz/legislativní/sbírka/111/2009/pojem/má-název-ulice';
     static HOUSE_NUMBER = 'https://slovník.gov.cz/legislativní/sbírka/111/2009/pojem/má-číslo-domovní';
     static HOUSE_NUMBER_TYPE = 'https://slovník.gov.cz/generický/adresy/pojem/typ-čísla-domovního';

@@ -10,6 +10,7 @@ import AddressComponent from "./address/AddressComponent";
 import AddressTextComponent from "./address/AddressTextComponent";
 import spring_backend_api from "../api/spring_backend_api";
 import AddressPlaceParser from "../utils/AddressPlaceParser";
+import inspire_address_api from "../api/inspire_address_api";
 
 interface Props {
     index: number,
@@ -35,6 +36,20 @@ class _GeoComponent extends Question {
         };
 
         console.log("Geo component init");
+    }
+
+    componentDidMount() {
+        //Test if form is prefilled and valid address place is defined
+        if (this.isAddressComponentQuestion()) {
+            const addressQuestion = this.locationQuestionsCache.find(q => q[Constants.HAS_MAIN_PROCESSING_ASPECT_TARGET]['@id'] === Constants.ADDRESS_IRI);
+            const addressCodeQuestion = Utils.getSubQuestionByPropertyValue(addressQuestion, Constants.HAS_MAIN_PROCESSING_ASPECT_TARGET, Constants.ADDRESS_CODE);
+            const addressCode = addressCodeQuestion[SConstants.HAS_ANSWER][0][SConstants.HAS_DATA_VALUE];
+            spring_backend_api.getAddressPlaceByCode(addressCode)
+              .then(response => {
+                  this.onAddressPlacePicked(AddressPlaceParser.parseAddressFromSpringBackend(response.data));
+              })
+              .catch(error => console.error(error));
+        }
     }
 
     getCoordinateProps(coordinateQuestion: any) {
