@@ -116,7 +116,7 @@ export default class Utils {
 
     let formBaseQuestions;
     if (init) {
-      formBaseQuestions = root[Constants.HAS_RELATED_QUESTIONS][0][Constants.HAS_RELATED_QUESTIONS];
+      formBaseQuestions = root[Constants.HAS_RELATED_QUESTIONS][1][Constants.HAS_RELATED_QUESTIONS];
     } else
       formBaseQuestions = root[Constants.HAS_RELATED_QUESTIONS];
 
