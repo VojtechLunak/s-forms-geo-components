@@ -4,6 +4,7 @@ import exampleForm from "./assets/example_form.json";
 import exampleFormTC from "./assets/example_turisticky_cil.json";
 import touristForm from "./assets/example_tourist_destination_form_with_location.json";
 import touristFormWithData from "./assets/example_tourist_destination_form_with_location_with_data.json";
+import mondisForm from "./assets/example_mondis_form.json";
 import possibleValues from "./assets/possibleValues.json";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import GeoComponents from "../GeoComponents";
@@ -104,4 +105,10 @@ export const TouristDestinationWithGeolocationWithData = Template.bind({});
 TouristDestinationWithGeolocationWithData.args = {
   options: options,
   form: touristFormWithData
+};
+
+export const Mondis = Template.bind({});
+Mondis.args = {
+  options: options,
+  form: mondisForm
 };
