@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "microbundle --jsx React.createElement",
+    "build": "microbundle --jsx React.createElement --format modern,esm",
     "build:lib": "npm run build && npm pack",
     "build-storybook": "build-storybook"
   },
@@ -12,20 +12,14 @@
     "node": ">=14.17.1"
   },
   "type": "module",
-  "source": "src/lib.js",
+  "source": "src/s-forms-geo-components.ts",
+  "main": "dist/s-forms-geo-components.js",
   "exports": "./dist/s-forms-geo-components.modern.js",
   "module": "./dist/s-forms-geo-components.js",
   "unpkg": "./dist/s-forms-geo-components.umd.js",
-  "targets": {
-    "browser": {
-      "distDir": "dist",
-      "outputFormat": "commonjs",
-      "optimize": false
-    }
-  },
   "files": [
-    "src/",
-    "dist/"
+    "dist/*.*",
+    "dist/**/*"
   ],
   "dependencies": {
     "@types/leaflet": "^1.7.11",
@@ -35,7 +29,9 @@
     "react-leaflet-custom-control": "^1.2.2"
   },
   "peerDependencies": {
-    "@kbss-cvut/s-forms": "^0.7.0"
+    "@kbss-cvut/s-forms": "^0.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",

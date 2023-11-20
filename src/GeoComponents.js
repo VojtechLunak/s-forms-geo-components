@@ -3,8 +3,8 @@ import {Constants as SConstants} from "@kbss-cvut/s-forms";
 import NullQuestion from "./components/NullQuestion";
 import Utils from "./utils/Utils.js";
 import NiceComponent from "./components/NiceComponent";
-import GeoComponent from "./components/GeoComponent.tsx";
-import AddressTextComponent from "./components/address/AddressTextComponent";
+import GeoComponent from "./components/GeoComponent";
+import "./styles/components.css";
 
 export default class GeoComponents {
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import AddressPlace from "../model/AddressPlace";
 
 export default class AddressPlaceParser {

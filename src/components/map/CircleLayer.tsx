@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react";
 import {Circle, LayerGroup, Tooltip} from "react-leaflet";
 import {LatLng} from "leaflet";

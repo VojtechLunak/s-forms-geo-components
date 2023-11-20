@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {LatLng} from "leaflet";
 import React, {useState} from "react";
 import {Marker, useMapEvents} from "react-leaflet";

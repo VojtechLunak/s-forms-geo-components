@@ -19,7 +19,7 @@ export default function ResetFormButton(props: Props) {
     const divRef = useRef(null);
 
     useEffect(() => {
-        L.DomEvent.disableClickPropagation(divRef.current);
+        L.DomEvent.disableClickPropagation(divRef.current!);
     });
 
     return (

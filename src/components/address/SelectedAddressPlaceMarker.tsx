@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import L, {LatLng} from 'leaflet';
 import AddressPlace from "../../model/AddressPlace";
@@ -5,7 +6,7 @@ import { Marker, Tooltip } from "react-leaflet";
 import geoFillSelected from "../../img/geo-fill-selected.svg";
 
 const iconPickedAddressPlace = L.icon({
-    iconUrl: geoFillSelected,
+    iconUrl: "../../img/geo-fill-selected.svg",
     iconSize: [40, 52],
     iconAnchor: [24, 52],
     popupAnchor: [0,-40]

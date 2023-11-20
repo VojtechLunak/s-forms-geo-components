@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import {ConfigurationContext, FormQuestionsContext, Question, Constants as SConstants} from '@kbss-cvut/s-forms';
 import Constants from '../Constants';

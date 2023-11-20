@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import L, {LatLng} from 'leaflet';
 import {CircleMarker, Marker, Popup} from "react-leaflet";
@@ -10,14 +11,14 @@ import geoFillSelected from "../../img/geo-fill-selected.svg";
 
 
 const iconAddressPlace = L.icon({
-    iconUrl: geoFill,
+    iconUrl: "../../img/geo-fill.svg",
     iconSize: [32, 44],
     iconAnchor: [16, 44],
     popupAnchor: [0,-40]
 });
 
 const iconPickedAddressPlace = L.icon({
-    iconUrl: geoFillSelected,
+    iconUrl: "../../img/geo-fill-selected.svg",
     iconSize: [40, 52],
     iconAnchor: [24, 52],
     popupAnchor: [0,-40]

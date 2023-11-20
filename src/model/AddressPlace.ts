@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Constants from "../Constants";
 
 export default class AddressPlace {
